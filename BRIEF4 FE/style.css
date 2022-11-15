@@ -45,13 +45,13 @@ margin-top:    10px;
 
 }
 .video{
-   
+    height: 90vh;
     width: 100%;  
-    object-fit: none;
+     object-fit: none; 
 }
 
 .vid{
-    width: 1263px;
+    width: 100%;
 }
 .img{
     position: absolute;
@@ -127,7 +127,7 @@ position: absolute;
 width: 462px;
 height: 105px;
 left: 260px;
-top: 1304px;
+top: 1107px;
 width: 60%;
 
 }
