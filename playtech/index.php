@@ -10,10 +10,10 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="responsive.css">
   <!-- JavaScript Bundle with Popper -->
-  <script defer src="js.js"></script>
+
   <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-
+   <script defer src="js.js"></script>
 
   <title>PLAYTECH</title>
 </head>
@@ -111,14 +111,19 @@
       </div>
     </div>
   </section>
+  <!-- about -->
   <section class="parent1">
   <div class="titreca">
-      <H1 class="the">THE</H1>
-      <h1 class="cate">GATEGORY</h1><canvas class="canvas"></canvas>
+      <H1 class="the">AB</H1>
+      <h1 class="cate">OUT</h1><canvas class="canvas"></canvas>
 </div>
+<div class="about">
     <div class="vid">
       <video  class="video" src="videos/controller.mp4" autoplay muted></video>
-    </div>
+    </div >
+    <p class="textabout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque assumenda modi, recusandae laboriosam repellat placeat provident alias sint ullam nisi molestiae, natus excepturi facilis porro accusamus impedit error numquam voluptatem quo similique illum qui! Vero, reiciendis. Nihil, reprehenderit a esse dolor, voluptatibus quibusdam debitis non quas culpa quam, iste vero! Consequuntur aperiam labore facilis temporibus. Sit quia exercitationem nisi voluptates!</p>
+  
+  </div>
   </section>
 
 

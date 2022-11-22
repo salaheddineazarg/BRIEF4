@@ -70,7 +70,7 @@ if(isset($_POST['hidden1']) and $_POST['hidden1']!=1 ){
       <?php
       foreach ($data as $row) {
       ?>
-        <div class="card text-center carddata">
+        <div class="card carddata text-center carddata">
           <img id="myimg" src="img/<?php echo $row['image']; ?>" class="card-img-top imggallery " alt="">
           
           

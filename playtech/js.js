@@ -1,6 +1,7 @@
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
+ 
 
 
 if (prevScrollpos < currentScrollPos) {
@@ -10,6 +11,7 @@ if (prevScrollpos < currentScrollPos) {
   }
   prevScrollpos = currentScrollPos;
 }
+// ====================================================================
 
 var test= document.getElementById('video');
 test.play();
