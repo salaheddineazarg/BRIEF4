@@ -1,15 +1,15 @@
 
 <?php 
  require 'conction.php';
-  
- if(isset($_GET['id'])){
-  $queryp='SELECT * FROM `product` where id_c=11 ';
- }
+ if(isset($_POST['hidden1']) and $_POST['hidden1']!=1 ){
+  $idccatii=$_POST['hidden1'];
+  $queryp="SELECT * FROM `product`WHERE `id_c`= $idccatii ";
+ }  
  else{
-  $queryp='SELECT * FROM `product` ';
+  $queryp='SELECT * FROM `product`';
  }
  $query='SELECT * FROM category ';
- $query_run=mysqli_query($conn,$query);
+ $query_run=mysqli_query($conn,$query)->fetch_all(MYSQLI_ASSOC);
 
  $queryp_run=mysqli_query($conn,$queryp);
 ?>
@@ -25,18 +25,21 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
     <script defer src="js.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
 
 
     <title>PLAYTECH</title>
 </head>
 
 <body>
-<!-- <form name="myForm" id="myForm" action=""  method="POST">
-    <input type="hidden"  name="hidden1" id="hidden1" />
-</form> -->
+<form name="myForm1" id="myForm1" action=""  method="POST">
+    <input type="hidden"  name="hidden1" id="hidden1"/>
+</form>
     <nav id="navbar" class="navbar nav navbar-expand-lg bg-light">
         <div class="container-fluid">
             <img class="logo" src="image/logo.png" alt="">
+            <div class="nvb">
             <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -60,6 +63,7 @@
                 </ul>
 
             </div>
+            </div>
         </div>
     </nav>
     <!-- end nav -->
@@ -76,38 +80,149 @@
     <!-- les card -->
     <section class="parentgallery">
         <nav class="category">
+        <input type="button"  class="names text-center" id="tt" value="TOUT CATEGORY" onclick="filter('1');" > </input>
           <?php 
           foreach($query_run as $row){
             ?>
-            <span class="names text-center"><a id="tt" value="<?php echo $row['id_c']?>" onclick="filter();"  class="name1"> <b> <?php  echo $row['name'] ?></b> </a></span>
+            <input type="button"  class="names text-center" id="tt" value="<?php  echo $row['name'] ?>" onclick="filter(<?php echo $row['id_c']?>);" > </input>
             <?php
           }
           ?>
          
-      
-        </nav> 
+          <!-- <span class="names text-center"><a class="name"><b> XBOX </b></a></span>
+          <span class="names text-center"><a class="name"> <b> PC GAMER</b> </a></span>
+          <span class="names text-center"><a class="name1"> <b> ACCESSOIRES</b></a></span> -->
+        </nav>
         <div class="child">
 
           <!-- CARD1 -->
           <?php 
           foreach($queryp_run as $row){
             ?>
-          <div class="card cardmhome " style="width: 18rem;">
+          <div class="card cardm " style="width: 18rem;">
             <img src="img/<?php echo $row['image'] ?>" class="card-img-top imggallery  " alt="...">
-            <div class="card-body text-center">
-              <h5 class="card-title text-center"><?php echo $row['name'] ?></h5>
-              <p class="card-text textshop"><?php echo $row['description'] ?></p>
-                <div class="prix">
-              <p class="price"><b> <?php echo $row['prix'] ?></b></p>
-              <p class="derhams">Dhs</p>
-            </div>
-              <a href="#" class="btn ms-3 btn-primary">BUY NOW</a>
+            <div class="card-body">
+              <h5 class="card-title"><?php echo $row['name'] ?></h5>
+              <p class="card-text"><?php echo $row['description'] ?></p>
+              <a href="#" class="btn ms-5 btn-primary">BUY NOW</a>
             </div>
           </div>
           <?php
           }
           ?>
-         
+          <!-- card2 -->
+          <!-- <div class="card cardm" style="width: 18rem;">
+            <img src="image/ps5.png" class="card-img-top  imggallery" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Playstation 5</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn ms-5 btn-primary">BUY NOW</a>
+            </div>
+          </div> -->
+        
+        <!-- card3 -->
+        <!-- <div class="card cardm" style="width: 18rem;">
+          <img src="image/ps5 black.png" class="card-img-top imggallery " alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Playstation 5</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn ms-5 btn-primary">BUY NOW</a>
+          </div>
+        </div> -->
+     <!-- ----------------------------------------------------------------------------------------- -->
+       <!-- card4 -->
+      <!-- <div class="card cardm" style="width: 18rem;">
+        <img src="image/xbox (2).png" class="card-img-top  imggallery " alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> WHITE XBOX</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn ms-5 btn-primary">BUY NOW</a>
+        </div>
+      </div> -->
+     
+    
+    <!-- Card5 -->
+    <!-- <div class="card cardm" style="width: 18rem;">
+      <img src="image/Xboxb.png" class="card-img-top imggallery  " alt="...">
+      <div class="card-body">
+        <h5 class="card-title">BLACK XBOX</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn ms-5 btn-primary">BUY NOW</a>
+      </div>
+    </div> -->
+    <!-- CARD6 -->
+    <!-- <div class="card cardm" style="width: 18rem;">
+      <img src="image/pc gamer co.png" class="card-img-top imggallery  " alt="...">
+      <div class="card-body">
+        <h5 class="card-title">PC GAMER</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn ms-5 btn-primary">BUY NOW</a>
+      </div>
+    </div> -->
+    <!-- --------------------------------------------------------------------------------------------------------------- -->
+    <!-- CARD7 -->
+   
+    <!-- card8 -->
+    <!-- <div class="card cardm" style="width: 18rem;">
+      <img src="image/pcgamer black.png" class="card-img-top imggallery  " alt="...">
+      <div class="card-body">
+        <h5 class="card-title">PC GAMER</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn ms-5  btn-primary">BUY NOW</a>
+      </div>
+    </div> -->
+    
+    <!-- CARD9 -->
+    <!-- <div class="card cardm" style="width: 18rem;">
+      <img src="image/controllerblack.png" class="card-img-top imggallery " alt="...">
+      <div class="card-body">
+        <h5 class="card-title">WIRELESS CONTROLLER-BLACK </h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn ms-5 btn-primary">BUY NOW</a>
+      </div>
+    </div> -->
+    <!-- ------------------------------------------------------------------------------------>
+    <!-- CARD10 -->
+    <!-- <div class="card cardm" style="width: 18rem;">
+      <img src="image/controllerwhite.png" class="card-img-top  imggallery  " alt="...">
+      <div class="card-body">
+        <h5 class="card-title">WIRELESS CONTROLLER-WHITE </h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn ms-5 btn-primary">BUY NOW</a>
+      </div>
+    </div> -->
+    <!-- card11 -->
+    <!-- <div class="card cardm" style="width: 18rem;">
+      <img src="image/headset.webp" class="card-img-top  imggallery  " alt="...">
+      <div class="card-body">
+        <h5 class="card-title">HEADSET</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn ms-5 btn-primary">BUY NOW</a>
+      </div>
+    </div> -->
+    <!-- card12 -->
+    <!-- <div class="card cardm" style="width: 18rem;">
+      <img src="image/controllermove.png" class="card-img-top  imggallery  " alt="...">
+      <div class="card-body">
+        <h5 class="card-title">MOVE CONTROLLER </h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn ms-5 btn-primary">BUY NOW</a>
+      </div>
+    </div> -->
+    
+    <!-- child -->
+       </div>
+       <!-- parent -->
       </section>
       <!-- footer -->
 
