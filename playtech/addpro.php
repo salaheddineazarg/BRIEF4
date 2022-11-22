@@ -5,7 +5,7 @@ $dataca = mysqli_query($conn, "SELECT * FROM `category` WHERE 1");
 if(isset($_POST['submit'])){
     $name=htmlspecialchars($_POST['name']);
     $prix=htmlspecialchars($_POST['prix']);
-    $Category=htmlspecialchars($_POST['Category']);
+    $Category=htmlspecialchars($_POST['category']);
     $description=htmlspecialchars($_POST['description']);
     if($_FILES["image"]["error"] === 4){
         echo 

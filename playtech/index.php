@@ -74,7 +74,7 @@
           <h5 class="card-title">PLAYSTATIONS</h5>
           <p class="card-text">some quick example text to build on the card title and make up the bulk of the card's
             content.</p>
-          <a href="#" class="btn buyg btn-primary ms-5">BUY NOW</a>
+          <a href="shop.php" class="btn buyg btn-primary ms-5">BUY NOW</a>
         </div>
       </div>
       <!-- card2 -->
@@ -84,7 +84,7 @@
           <h5 class="card-title">XBOX</h5>
           <p class="card-text">some quick example text to build on the card title and make up the bulk of the card's
             content.</p>
-          <a href="#" class="btn buyg btn-primary ms-5">BUY NOW</a>
+          <a href="shop.php" class="btn buyg btn-primary ms-5">BUY NOW</a>
         </div>
       </div>
 
@@ -95,7 +95,7 @@
           <h5 class="card-title">PC GAMER</h5>
           <p class="card-text">some quick example text to build on the card title and make up the bulk of the card's
             content.</p>
-          <a href="#" class="btn buyg btn-primary ms-5">BUY NOW</a>
+          <a href="shop.php" class="btn buyg btn-primary ms-5">BUY NOW</a>
         </div>
       </div>
       <!-- ----------------------------------------------------------------------------------------- -->
@@ -106,7 +106,7 @@
           <h5 class="card-title">ACCESSIORES</h5>
           <p class="card-text">some quick example text to build on the card title and make up the bulk of the card's
             content.</p>
-          <a href="#" class="btn buyg btn-primary ms-5">BUY NOW</a>
+          <a href="shop.php" class="btn buyg btn-primary ms-5">BUY NOW</a>
         </div>
       </div>
     </div>
@@ -144,7 +144,7 @@
     </div>
 
     <div class="videos">
-      <video class="video" src="videos/videoplayback.mp4" poster="" controls></video>
+      <video class="video" src="videos/videoplayback.mp4" poster="image/logo.png" controls></video>
     </div>
     <div class="videos">
       <video class="video" src="videos/fifa.mp4" controls></video>

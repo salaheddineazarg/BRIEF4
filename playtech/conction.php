@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$database='playtech';
+$database='plytech';
 $username = "root";
 $password = "";
 

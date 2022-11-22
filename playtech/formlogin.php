@@ -4,7 +4,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database="playtech";
+$database="plytech";
 
 $conn = new mysqli($servername, $username, $password,$database);
 

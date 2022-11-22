@@ -46,3 +46,8 @@ function sign () {
 //   console.log(typeof ,c);
 //   alert (c);
 // }
+function filter(ID){
+  document.getElementById('hidden1').value=ID;
+  document.getElementById('myForm1').submit();
+
+  }
