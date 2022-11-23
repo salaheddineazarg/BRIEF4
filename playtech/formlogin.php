@@ -10,13 +10,13 @@ $conn = new mysqli($servername, $username, $password,$database);
 
 
 
-if(isset($_POST['submit'])){
-  $name=htmlspecialchars(trim(strtolower($_POST['name'])));
-  $email=htmlspecialchars(trim(strtolower($_POST['email'])));
-  $passwordi=md5($_POST['password']);
-  $_query="INSERT INTO `admin`  value('$name','$email','$passwordi')";
-  mysqli_query($conn,$_query);
-}
+// if(isset($_POST['submit'])){
+//   $name=htmlspecialchars(trim(strtolower($_POST['name'])));
+//   $email=htmlspecialchars(trim(strtolower($_POST['email'])));
+//   $passwordi=md5($_POST['password']);
+//   $_query="INSERT INTO `admin`  value('$name','$email','$passwordi')";
+//   mysqli_query($conn,$_query);
+// }
 
 
 if(isset($_POST['submitlogin'])){
@@ -68,7 +68,7 @@ if(isset($_POST['submitlogin'])){
    <button type="submit" name="submitlogin" class="btn  btn-primary">Submit</button>
    </form>
    <!-- ------------------------------------------ -->
-   <form class="formsign" action="login.php" method="POST">
+   <!-- <form class="formsign" action="login.php" method="POST">
       <div class="mb-3 text-center">
      <label for="exampleInputPassword1" style="font-family: 'inter';" class="form-label">Full Name</label>
      <input type="text" name="name" style="font-family: 'inter';" class="form-control" id="exampleInputPassword1">
@@ -85,7 +85,7 @@ if(isset($_POST['submitlogin'])){
    </div>
   
    <button type="submit" name="submit" class="btn  btn-primary">Submit</button>
-   </form>
+   </form> -->
 
 </body>
 </html>
