@@ -5,8 +5,7 @@
     padding: 0%;
     text-decoration: none !important;
     list-style: none;
-    font-family: 'Anurati', sans-serif;
-                                                
+    font-family: 'Anurati', sans-serif;                                         
 }
 body{
     width: 100%;
@@ -15,8 +14,6 @@ body{
    background-attachment: fixed;
    background-repeat: no-repeat;
    background-size: cover;
-    
-
 }
 .nav{
    
@@ -621,6 +618,10 @@ margin-top:    10px;
   /* ================================================================== */
   /* media query */
   @media screen and (max-width:500px) {
+    .child{
+        width: 100%;
+    }
+
     .parentgallery{
         flex-direction: column;
     }
@@ -628,14 +629,19 @@ margin-top:    10px;
         
         flex-direction:column-reverse;
     }
+    .playtechgallery{
+        
+    margin-top: 37%;
+    }
     .category{
         position: none;
         width: 100%;
-        height: 13vh;
+        height: 8vh;
         gap: 0px;
         flex-direction: row;
         margin: 0%;
         z-index: 1;
+        font-size: small;
 
 
     }
@@ -644,7 +650,7 @@ margin-top:    10px;
         flex-direction: row;
     }
     .names{
-        width: 21%;
+        width: 18%;
     }
     .name{
         width: 21%;
