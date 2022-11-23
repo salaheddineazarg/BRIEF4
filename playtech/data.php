@@ -93,7 +93,7 @@ if(isset($_POST['hidden1']) and $_POST['hidden1']!=1 ){
       ?>
     </div>
     
-      <ul class="navdata  ">
+      <ul  class="navdata  ">
       <li class="nav-item">
           <select class="select"   onchange=" submit()" name="selectca" id="c_product">
           <option class="option"  value="1">ALL PRODUCTS</option>
@@ -112,7 +112,7 @@ if(isset($_POST['hidden1']) and $_POST['hidden1']!=1 ){
         
         <li class="nav-item name">
        
-          <a class="nav-link text-center " href="#">PLAY</a>
+          <a class="nav-link text-center " href="#">UP</a>
         </li>
         <li class="nav-item name">
           <a class="nav-link text-center " href="addpro.php">ADD PRODUCT</a>
@@ -136,8 +136,7 @@ if(isset($_POST['hidden1']) and $_POST['hidden1']!=1 ){
 
 
     
-      //  const path = " data.php/?id=" + e.target.value
-      //  window.location.assign(path);
+     
       document.getElementById('hidden1').value =c;
         document.getElementById('myForm').submit();
        

@@ -128,6 +128,9 @@ margin-top:    10px;
     margin-left: 2%;
     
 }
+.cards{
+    justify-content: center;
+}
 .cardmhome{
     margin-top: 20px;
     margin-left: 20px;
@@ -635,13 +638,16 @@ margin-top:    10px;
     .category{
         position: none;
         width: 100%;
-        height: 13vh;
+        height: 10vh;
         gap: 0px;
         flex-direction: row;
         margin: 0%;
         z-index: 1;
 
 
+    }
+    .child{
+        width: 100%;
     }
 
     .navdata{
@@ -649,7 +655,7 @@ margin-top:    10px;
          top: 0px;
         
         width: 100%;
-        height: 13vh;
+        height: 10vh;
         gap: 0px;
         flex-direction: row;
         margin: 0%;
@@ -657,10 +663,14 @@ margin-top:    10px;
         font-size: smaller;
     }
     .names{
-        width: 21%;
+        width: 15%;
+        HEIGHT: 56PX;
+        FONT-SIZE: xx-small;
     }
     .name{
-        width: 21%;
+        width: 28%;
+        height: 40px;
+        margin-top: 15PX;
     }
     .select{
         transform: translateX(-31px);
@@ -688,6 +698,15 @@ margin-top:    10px;
         width: 96%;
         height: 80vh;
         top: 17%;
+    }
+    /* home */
+    .vid{
+        width: 97%;
+        height: 400px;
+    }
+    .videos{
+        width: 98%;
+        height: 421px;
     }
 
    }
