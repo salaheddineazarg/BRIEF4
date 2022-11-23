@@ -140,24 +140,24 @@
   <section class="gallery">
 
     <div class="videos">
-      <video id="vid"  class="video" src="videos/ps4.mp4" controls  ></video>
+      <video id="vid"  class="video" src="videos/ps4.mp4" poster="image/ps5 black.png" controls  ></video>
     
     </div>
     <div class="videos">
-      <video class="video" src="videos/XBOX.mp4" controls></video>
+      <video class="video" src="videos/XBOX.mp4" poster="image/xbox (2).png" controls></video>
     </div>
 
     <div class="videos">
-      <video class="video" src="videos/videoplayback.mp4" poster="image/logo.png" controls></video>
+      <video class="video" src="videos/videoplayback.mp4"  poster="https://i.pinimg.com/564x/4e/b3/de/4eb3dec0dbf975422387aba39a939d8f.jpg" controls></video>
     </div>
     <div class="videos">
-      <video class="video" src="videos/fifa.mp4" controls></video>
+      <video class="video" src="videos/fifa.mp4" poster="https://i.pinimg.com/564x/88/d5/1c/88d51c761297d177b051f8cd078816c5.jpg" controls></video>
     </div>
     <div class="videos">
-      <video class="video" src="videos/callofduty.mp4" controls></video>
+      <video class="video" src="videos/callofduty.mp4" poster="https://i.pinimg.com/564x/de/df/4e/dedf4e2b06d96a2ee214d62a9a780abe.jpg" controls></video>
     </div>
     <div class="videos">
-      <video class="video" src="videos/godofwar.mp4" controls muted></video>
+      <video class="video" src="videos/godofwar.mp4" poster="https://i.pinimg.com/564x/5a/86/a5/5a86a54783754a8d9482571758c80757.jpg" controls muted></video>
     </div>
   </section>
   <!-- footer -->
