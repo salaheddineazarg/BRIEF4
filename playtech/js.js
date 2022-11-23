@@ -25,5 +25,4 @@ test1.play();
 function filter(ID){
   document.getElementById('hidden1').value=ID;
   document.getElementById('myForm1').submit();
-
   }

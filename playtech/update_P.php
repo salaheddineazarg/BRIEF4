@@ -15,14 +15,14 @@ if(isset($_POST['submit'])){
      $newImageName.='.'. $imageEx;
     move_uploaded_file($tmpName,'img/'.$newImageName);
      $proId=$_GET['id'] ;
-     //$size_img=$_FILES["imagee"]["size"];
+    
      if($_FILES['imagee']['size']>0){
-        echo"ssss";
+       
         $qury1="UPDATE `product` set `name`='$name' ,`description`='$description',`prix`=$prix,`id_c`=$Category,`image`='$newImageName'   WHERE id=$proId";
 
      }
      else{
-        echo "mdkhlch";
+       
 
         $qury1="UPDATE `product` set `name`='$name' ,`description`='$description',`prix`=$prix,`id_c`=$Category  WHERE id=$proId";
 
@@ -74,10 +74,7 @@ if(isset($_POST['submit'])){
                         <a class="nav-link list" href="shop.php">GALLERY</a>
                     </li>
                     <span class="nav-item login">
-                        <!-- <svg class="user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path
-                                d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0S96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
-                        </svg> -->
+                      
                         <a class="list" href="data.php">GESTION
                         </a>
                     </span>
@@ -91,7 +88,6 @@ if(isset($_POST['submit'])){
     <?php
 
     if(isset($_GET['id'])){ 
-        // $proId=mysqli_real_ensca_string($con,$_GET['id']);
         $proId=$_GET['id'] ;
         $qury="SELECT * FROM `product` WHERE id=$proId";
         $dataca = mysqli_query($conn, "SELECT * FROM `category` WHERE 1");
@@ -114,31 +110,20 @@ if(isset($_POST['submit'])){
         </div>
         <div class="input-group bg-white mb-3">
         <?php
-        if(isset($_POST['sub_image'])){
-            if(($_FILES['imagee']['size']>0)){     
-            echo "<img id='myimg' src='img/".$newImageName."'></img>"; 
-            }
-            else{
-                echo "<img id='myimg' src='img/".$prodact['image']."'></img>";     
-            }
-        } 
-        else{         
-            echo "<img id='myimg' src='img/".$prodact['image']."'></img>";
-        } 
+        echo "<img id='myimg' src='img/".$prodact['image']."'></img>";
         ?>
-             <!-- <form action="" method="post"> -->
+          
            
-          <input  accept=".jpg,jpeg,.png" style=" background-image: url( img/<?php echo $prodact['image'] ?>);" name="imagee" type="file" class="form-control imgupdate " id="basic-url"
+          <input  accept=".jpg,jpeg,.png" name="imagee" type="file" class="form-control imgupdate " id="basic-url"
                 aria-describedby="basic-addon3">
                
-                <!-- <button style="background-color:red;" name="sub_image" type="submit">chnage</button> 
-                </form> -->
+            
         </div>
    
 
         <div class="input-group mb-3">
            
-            <select  name="Category" class="form-control" name="" id="">
+            <select  name="Category" class="form-control"  >
                 <?php
             foreach ($dataca as  $row) {
             ?>
@@ -161,12 +146,14 @@ if(isset($_POST['submit'])){
                 <?php
 
             }else{
-                echo "<h1> not fund id </h1>";
+                echo "<h1> not found id </h1>";
             }
         }
-     
-    } else{
-        echo "Not Fuond";
+    
+    } else{ 
+ 
+        $_SESSION['messge']="NOT FOUND PRODUCT,PLEASE TRY AGAIN";
+        header("location:data.php");
     }
     ?>
  

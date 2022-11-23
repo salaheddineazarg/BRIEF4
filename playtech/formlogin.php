@@ -1,23 +1,7 @@
 
 <?php
  session_start();
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database="plytech";
-
-$conn = new mysqli($servername, $username, $password,$database);
-
-
-
-// if(isset($_POST['submit'])){
-//   $name=htmlspecialchars(trim(strtolower($_POST['name'])));
-//   $email=htmlspecialchars(trim(strtolower($_POST['email'])));
-//   $passwordi=md5($_POST['password']);
-//   $_query="INSERT INTO `admin`  value('$name','$email','$passwordi')";
-//   mysqli_query($conn,$_query);
-// }
-
+require 'conction.php';
 
 if(isset($_POST['submitlogin'])){
 
@@ -30,10 +14,9 @@ if(isset($_POST['submitlogin'])){
     
     }
     else{
+      
      echo " <script> alert('Your password is not correct')</script>";
-    
-      
-      
+   
     }
     
 
@@ -67,25 +50,7 @@ if(isset($_POST['submitlogin'])){
   
    <button type="submit" name="submitlogin" class="btn  btn-primary">Submit</button>
    </form>
-   <!-- ------------------------------------------ -->
-   <!-- <form class="formsign" action="login.php" method="POST">
-      <div class="mb-3 text-center">
-     <label for="exampleInputPassword1" style="font-family: 'inter';" class="form-label">Full Name</label>
-     <input type="text" name="name" style="font-family: 'inter';" class="form-control" id="exampleInputPassword1">
-   </div>
-   <div class="mb-3 text-center">
-     <label for="exampleInputEmail1" style="font-family: 'inter';" class="form-label">Email address</label>
-     <input type="email" style="font-family: 'inter';" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-     <div id="emailHelp" style="font-family: 'inter';" class="form-text">We'll never share your email with anyone else.</div>
-   </div>
  
-   <div class="mb-3 text-center">
-     <label for="exampleInputPassword1" style="font-family: 'inter';" class="form-label">Password</label>
-     <input type="password" style="font-family: 'inter';" name="password"class="form-control" id="exampleInputPassword1">
-   </div>
-  
-   <button type="submit" name="submit" class="btn  btn-primary">Submit</button>
-   </form> -->
 
 </body>
 </html>
