@@ -39,7 +39,7 @@
     <nav id="navbar" class="navbar nav navbar-expand-lg bg-light">
         <div class="container-fluid">
             <img class="logo" src="image/logo.png" alt="">
-            <div class="nvb">
+            
             <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -63,7 +63,7 @@
                 </ul>
 
             </div>
-            </div>
+            
         </div>
     </nav>
     <!-- end nav -->

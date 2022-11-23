@@ -44,7 +44,7 @@
             </div>
         </div>
     </nav>
-
+<!-- END NAV -->
 
       <?php
 
@@ -65,7 +65,7 @@ if(isset($_POST['hidden1']) and $_POST['hidden1']!=1 ){
   <form name="myForm" id="myForm" action=""  method="POST">
     <input type="hidden"  name="hidden1" id="hidden1" />
 </form>
-  <div class="contt">
+  <diV class="contt">
     <div class="continer_cards row">
       <?php
       foreach ($data as $row) {
@@ -93,7 +93,7 @@ if(isset($_POST['hidden1']) and $_POST['hidden1']!=1 ){
       ?>
     </div>
     
-    <div class="category">
+    <diV class="category">
       <ul class="navdata  ">
       <li class="nav-item">
           <select class="select"   onchange=" submit()" name="selectca" id="c_product">
@@ -121,8 +121,8 @@ if(isset($_POST['hidden1']) and $_POST['hidden1']!=1 ){
        
         
       </ul>
-    </div>
-  </div>
+    </diV>
+  </diV>
 
 
 

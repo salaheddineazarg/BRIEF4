@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
   $name=htmlspecialchars(trim(strtolower($_POST['name'])));
   $email=htmlspecialchars(trim(strtolower($_POST['email'])));
   $passwordi=md5($_POST['password']);
-  $_query="INSERT INTO `admin` (name,email,password) value('$name','$email','$passwordi')";
+  $_query="INSERT INTO `admin`  value('$name','$email','$passwordi')";
   mysqli_query($conn,$_query);
 }
 
@@ -23,7 +23,7 @@ if(isset($_POST['submitlogin'])){
 
     $emaillogin=htmlspecialchars(trim(strtolower($_POST['emaillogin'])));
     $passwordlogin=md5($_POST['passwordlogin']);
-    $_query="SELECT * FROM `admin` WHERE id=11 && email = '$emaillogin' && password = '$passwordlogin' ";
+    $_query="SELECT * FROM `admin` WHERE  email = '$emaillogin' && password = '$passwordlogin' ";
     if(mysqli_num_rows(mysqli_query($conn,$_query))>0) {
       $_SESSION['email']=$emaillogin;
       header("Location: data.php");
