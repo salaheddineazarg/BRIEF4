@@ -431,7 +431,7 @@ margin-top:    10px;
    }
    /* data.php */
    .bodydata{
-    width: 99%;
+    width: 98%;
     background-image:  url(https://cdn.mos.cms.futurecdn.net/wNuRFVva6MJM2pvqhdXGZE-1200-80.jpg.webp);
    background-position: center;
    background-attachment: fixed;
@@ -443,9 +443,13 @@ margin-top:    10px;
     flex-direction: row-reverse;
 }
    .navdata{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    left: 0px;
     display: flex;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 20%;
     flex-direction: column;
     justify-content: space-around;
     background-color: #000000;
@@ -551,8 +555,8 @@ margin-top:    10px;
     margin-left:10% ;
     background-color:rgba(11, 11, 11,0.4);
     padding: 30px;
-    height: 87vh;
- width: 40%;    
+    height: 517px;
+ width: 450px;    
  box-shadow: 0px 0px 50px #FFFDBD; 
  border-radius: 30px;
  font-family: inter;
@@ -645,9 +649,18 @@ margin-top:    10px;
 
 
     }
+
     .navdata{
-        display: flex;
+         position: none;
+         top: 0px;
+        
+        width: 100%;
+        height: 13vh;
+        gap: 0px;
         flex-direction: row;
+        margin: 0%;
+        z-index: 1;
+        font-size: smaller;
     }
     .names{
         width: 18%;
@@ -655,14 +668,33 @@ margin-top:    10px;
     .name{
         width: 21%;
     }
+    .select{
+        transform: translateX(-31px);
+      
+        margin-top: 24px;
+    }
+    
     .formadd{
         width: 90%;
         margin-left:4% ;
     }
+    .formupdate{
+        width: 90%;
+        margin-left:4% ;
+        height: 555px;
+
+
+    }
     .login{
         margin-left: 0px;
     }
-
+    .form{
+        position: absolute;
+        left: 2%;
+        width: 96%;
+        height: 80vh;
+        top: 17%;
+    }
 
    }
 

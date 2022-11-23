@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="responsive.css">
   <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   <script defer src="js.js"></script>
 
 
@@ -40,7 +41,7 @@
               <path
                 d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0S96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
             </svg>
-            <a onclick="sign();" class="list" >SIGN UP</a>
+            <a  class="list" >LOGIN</a>
           </span>
         </ul>
 
@@ -48,7 +49,7 @@
     </div>
   </nav>
   <!-- second nav -->
-  <nav id="navbar" class="navbar nav2 navbar-expand-lg bg-light">
+  <!-- <nav id="navbar" class="navbar nav2 navbar-expand-lg bg-light">
     <div class="container-fluid">
       <img class="logo" src="image/logo.png" alt="">
       <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
@@ -74,7 +75,7 @@
 
       </div>
     </div>
-  </nav>
+  </nav> -->
 
   <!-- end nav -->
 <video id="videocover" class="vidlogin" src="videos/coverlogin.mp4" autoplay  loop></video>

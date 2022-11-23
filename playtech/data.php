@@ -93,7 +93,6 @@ if(isset($_POST['hidden1']) and $_POST['hidden1']!=1 ){
       ?>
     </div>
     
-    <diV class="category">
       <ul class="navdata  ">
       <li class="nav-item">
           <select class="select"   onchange=" submit()" name="selectca" id="c_product">
@@ -121,7 +120,7 @@ if(isset($_POST['hidden1']) and $_POST['hidden1']!=1 ){
        
         
       </ul>
-    </diV>
+   
   </diV>
 
 
