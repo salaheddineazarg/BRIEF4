@@ -28,6 +28,7 @@
       echo "<script>alert('deconctionnnnnn')</script>";
     }
        ?>
+
   <nav id="navbar" class="navbar nav navbar-expand-lg bg-light">
     <div class="container-fluid">
       <img class="logo" src="image/logo.png" alt="">

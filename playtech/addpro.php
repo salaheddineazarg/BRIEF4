@@ -8,8 +8,7 @@ if(isset($_POST['submit'])){
     $Category=htmlspecialchars($_POST['category']);
     $description=htmlspecialchars($_POST['description']);
     if($_FILES["image"]["error"] === 4){
-        echo 
-        "<script>alert('Image Dose Note Exist');</script>";
+        echo "<script>alert('Image Dose Note Exist');</script>";
     }
     else{
         $FileName=$_FILES["image"]["name"];
@@ -26,14 +25,14 @@ if(isset($_POST['submit'])){
             $newImageName.='.'. $imageEx;
             move_uploaded_file($tmpName,'img/'.$newImageName);
            $qury="INSERT INTO `product`(`name`, `description`, `prix`, `id_c`, `image`) VALUES ('$name','$description',$prix,$Category,'$newImageName')";
-           // $qury="INSERT INTO `product`(`name`, `description`, `prix`, `id_c`, `image`) VALUES ('$name','$description',$prix,$Category,$newImageName)";
+          
             $qury_runn= mysqli_query($conn,$qury);
             if($qury_runn){
               $_SESSION['messge']="Successfully ";
               header("Location:data.php");
             }
             else{
-             $_SESSION['messge']="Prodact not add";
+             $_SESSION['messge']="Product not add";
              header("Location:data.php");
             }
           
@@ -52,8 +51,10 @@ if(isset($_POST['submit'])){
     <!-- CSS only -->
     <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="style.css">
+    <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src ="js.js"></script>
+    
     
 
 <title>add prodact</title>

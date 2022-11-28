@@ -2,9 +2,9 @@
 session_start();
 require "conction.php";
 $id=$_GET['id'];
-$qury ="DELETE FROM `product` WHERE id=$id";
-$qury_run=mysqli_query($conn,$qury);
-if($qury_run){
+$query ="DELETE FROM `product` WHERE id=$id";
+$query_run=mysqli_query($conn,$query);
+if($query_run){
     $_SESSION['messge']="Successfully delted";
     header("Location:data.php");
 }
