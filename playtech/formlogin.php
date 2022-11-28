@@ -18,12 +18,17 @@ $conn = new mysqli($servername, $username, $password,$database);
 //   mysqli_query($conn,$_query);
 // }
 
+if(isset($_SESSION['email'])){
+  echo "<script>alert('dkhelll')</script>";
+  header("Location:data.php");
+}
+
 
 if(isset($_POST['submitlogin'])){
 
     $emaillogin=htmlspecialchars(trim(strtolower($_POST['emaillogin'])));
     $passwordlogin=md5($_POST['passwordlogin']);
-    $_query="SELECT * FROM `admin` WHERE  email = '$emaillogin' && password = '$passwordlogin' ";
+    $_query="SELECT * FROM `admin` WHERE  email = '$emaillogin' && password ='$passwordlogin'";
     if(mysqli_num_rows(mysqli_query($conn,$_query))>0) {
       $_SESSION['email']=$emaillogin;
       header("Location: data.php");

@@ -18,7 +18,16 @@
   <title>PLAYTECH</title>
 </head>
   
+
 <body>
+  <?php
+  session_start();  
+  
+    if(isset($_GET['id']) && $_GET['id']==0){
+       unset($_SESSION['email']);
+      echo "<script>alert('deconctionnnnnn')</script>";
+    }
+       ?>
   <nav id="navbar" class="navbar nav navbar-expand-lg bg-light">
     <div class="container-fluid">
       <img class="logo" src="image/logo.png" alt="">

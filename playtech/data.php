@@ -37,7 +37,7 @@
                             <path
                                 d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0S96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
                         </svg> -->
-                        <a class="list" href="index.php">DECONCTED</a>
+                        <a class="list" href="index.php?id=0">DECONCTED</a>
                     </span>
                 </ul>
 
@@ -48,7 +48,16 @@
 
       <?php
 
-      include 'meesge.php';
+           include 'meesge.php';
+if(isset( $_SESSION['email'])){
+
+  echo "<script>alert('dkhelllllllllllll')</script>";
+}else{
+  echo "<script>alert('mdkhlech')</script>";
+    header("Location: login.php");
+  
+}
+ 
 
 if(isset($_POST['hidden1']) and $_POST['hidden1']!=1 ){
   $idccati=$_POST['hidden1'];
