@@ -16,15 +16,12 @@ if(isset($_POST['submitlogin'])){
     if(mysqli_num_rows(mysqli_query($conn,$_query))>0) {
       $_SESSION['email']=$emaillogin;
       header("Location: data.php");
-    
     }
     else{
       
      echo " <script> alert('Your password is not correct')</script>";
    
     }
-    
-
 }
 ?>
 <!DOCTYPE html>

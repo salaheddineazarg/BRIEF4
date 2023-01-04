@@ -97,12 +97,12 @@ if(isset($_POST['submit'])){
               <form class="formupdate" id="fadd" method="POST" autocomplete="off" enctype="multipart/form-data">
         <div class="input-group mb-3">
             
-            <input style="font-family: inter;" name="name" type="text" value="<?php echo $prodact['name']?>" class="form-control" placeholder="name" aria-label="Username"
+            <input required style="font-family:  inter;" name="name" type="text" value="<?php echo $prodact['name']?>" class="form-control" placeholder="name" aria-label="Username"
                 aria-describedby="basic-addon1">
         </div>
 
         <div class="input-group mb-3">
-            <input name="prix" type="text"  value=<?php echo $prodact['prix']?> class="form-control" placeholder="Prix" aria-label="Recipient's username"
+            <input required name="prix"  type="text" value=<?php echo $prodact['prix']?> class="form-control" placeholder="Prix" aria-label="Recipient's username"
                 aria-describedby="basic-addon2">
             
         </div>
@@ -134,7 +134,7 @@ if(isset($_POST['submit'])){
         </div>
         <div class="input-group">
          
-            <textarea  style="font-family: inter;" name="description"  class="form-control " aria-label="With textarea"> <?php echo $prodact['description']?></textarea> <br>
+            <textarea required style="font-family: inter;" name="description"  class="form-control " aria-label="With textarea"> <?php echo $prodact['description']?></textarea> <br>
 
         </div>
         <div id="btnadd" class="input-group">

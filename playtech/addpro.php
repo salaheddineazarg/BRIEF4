@@ -93,16 +93,16 @@ if(isset($_POST['submit'])){
 <form class="formadd" id="fadd" method="POST" autocomplete="off" enctype="multipart/form-data" >
 <div class="input-group mb-3">
   <!-- <span class="input-group-text" id="basic-addon1">Name</span> -->
-  <input  style="font-family: inter;"   name="name" type="text" class="form-control" placeholder="name" aria-label="Username" aria-describedby="basic-addon1">
+  <input  required style="font-family: inter;"   name="name" type="text" class="form-control" placeholder="name" aria-label="Username" aria-describedby="basic-addon1">
 </div>
 
 <div class="input-group mb-3">
-  <input  name="prix" type="text" class="form-control" placeholder="prix" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <input required  name="prix" type="text" class="form-control" placeholder="prix" aria-label="Recipient's username" aria-describedby="basic-addon2">
   <!-- <span class="input-group-text" id="basic-addon2">Prix</span> -->
 </div>
 <div class="input-group">
   <!-- <span class="input-group-text">With textarea</span> -->
-  <textarea  style="font-family: inter;"  name="description" placeholder="description" class="form-control desc" aria-label="With textarea"></textarea><br>
+  <textarea required style="font-family: inter;"  name="description" placeholder="description" class="form-control desc" aria-label="With textarea"></textarea><br>
 
 </div>
 
